@@ -98,12 +98,37 @@ body{
 .tvbutton{
     background-color:rgb(143, 143, 143);
     width: 2.5%;
-    height: 2.5%;
+    height: 3%;
     position: absolute;
     left: 88%;
     top: 94%;   
     border: 1px, rgb(63, 62, 62, 0.3), solid;
     border-radius: 2%;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-checkbox:checked + .tvscreen{
+    background-color: black;
+    width: 85%;
+    height: 85.25%;
+    position: absolute;
+    left: 7.5%;
+    top: 5.75%;
+    z-index: 25; 
+}
+
+.toggle-checkbox:checked + label + .tvlight{
+    background-color:rgba(15, 15, 15, 0.8);
+    width: .25%;
+    height: .25%;
+    position: absolute;
+    left: 85.75%;
+    top: 94.75%;   
+    border: 2px, rgba(255, 0, 0, 0.2), solid;
+    border-radius: 100%;
 }
 
 .tvlight{
@@ -112,7 +137,7 @@ body{
     height: .25%;
     position: absolute;
     left: 85.75%;
-    top: 94.5%;   
+    top: 94.75%;   
     border: 2px, rgba(255, 0, 0, 0.2), solid;
     border-radius: 100%;
 }
@@ -492,6 +517,7 @@ body{
     top: 20%;
     left: 67.5%;
     z-index: 10;
+    filter: opacity(.5);
 }
 
 .decoplatbody{
@@ -585,9 +611,18 @@ body{
     clip-path: circle(8.9% at 50% 50%);
     height: 100%;
     width: 100%;
-    z-index: 13;
+    z-index: 20;
     left: 12%;
     top: 5%;
+
+}
+
+.kirbyhandright:hover{
+    animation-name: waving;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
 }
 
 .kirbyfootleft{
@@ -688,4 +723,18 @@ body{
     top: 40%;
 }
 
-@keyframes 
+@keyframes waving {
+    0% {}
+    25% {
+      transform: translateX(2%) translateY(-2%);
+    }
+    50% {
+      transform: translateX(4%) translateY(-6%);
+    }
+    75% {
+      transform: translateX(4%) translateY(-9%);
+    }
+    100% {
+      transform: translateX(3%) translateY(-13%);
+    }
+  }
