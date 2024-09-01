@@ -1,0 +1,691 @@
+body{
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.floor{
+    background-color: rgb(75, 47, 26);
+    clip-path: polygon(46% 60%, 0% 100%, 100% 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+}
+
+.wallleft{
+    background-color: rgb(238, 238, 237);
+    clip-path: polygon(0 0, 46% 0, 46% 60%, 0% 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    align-self: flex-start;
+    position: absolute;
+}
+
+.wallright{
+    background-color: rgba(233, 231, 222, 0.849);
+    clip-path: polygon(100 0, 46% 0, 46% 60%, 100% 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.trimleft{
+    clip-path: polygon(0 98%, 46% 58%, 46% 60%, 0% 100%);
+    background-color: rgb(250, 250, 250);  
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.trimright{
+    clip-path: polygon(100% 100%, 46% 60%, 46% 58%, 100% 98%);
+    background-color: rgb(241, 241, 241);  
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.tv{
+    position: absolute;
+    background-color: rgb(143, 143, 143);
+    height: 35%;
+    width: 30%;
+    z-index: 3;
+    top: 50%;
+    left: 33%;
+}
+
+.tvdepth{
+    position: absolute;
+    background-color: rgb(92, 92, 92, 0.9);
+    height: 35.5%;
+    width: 30%;
+    z-index: 3;
+    top: 49.5%;
+    left: 33%;
+    border-radius: 1%;
+}
+
+.tvshadow{
+    position: absolute;
+    background-color: rgba(22, 22, 22, 0.5);
+    height: 35.5%;
+    width: 30.25%;
+    z-index: 3;
+    top: 49.75%;
+    left: 33%;
+    border-radius: 1.5%
+}
+
+.tvscreen{
+    background-color: black;
+    width: 85%;
+    height: 85.25%;
+    position: absolute;
+    left: 7.5%;
+    top: 5.75%;
+    z-index: 3;
+}
+
+.tvbutton{
+    background-color:rgb(143, 143, 143);
+    width: 2.5%;
+    height: 2.5%;
+    position: absolute;
+    left: 88%;
+    top: 94%;   
+    border: 1px, rgb(63, 62, 62, 0.3), solid;
+    border-radius: 2%;
+}
+
+.tvlight{
+    background-color:rgb(255, 0, 0, 0.8);
+    width: .25%;
+    height: .25%;
+    position: absolute;
+    left: 85.75%;
+    top: 94.5%;   
+    border: 2px, rgba(255, 0, 0, 0.2), solid;
+    border-radius: 100%;
+}
+
+.tvstand{
+    position: absolute;
+    background-color: rgb(129, 129, 129);
+    clip-path: polygon(16% 0, 84% 0, 90% 95%, 100% 100%, 0 100%, 10% 95%);
+    height: 35%;
+    width: 30%;
+    z-index: 2;
+    top: 52.25%;
+    left: 33%;
+}
+
+.smashbg{
+    background-color: rgb(255, 255, 255);
+    width: 98%;
+    height: 98%;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+.sky{
+    background-image: linear-gradient(rgb(95, 71, 230), rgb(214, 157, 166), rgb(252, 180, 86), white, white);
+    width: 98%;
+    height: 98%;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+.mtnclose{
+    clip-path: polygon(0 100%, 0% 37%, 8% 36%, 16% 37%, 23% 34%, 31% 33%, 39% 37%, 47% 32%, 52% 27%, 57% 22%, 64% 22%, 68% 28%, 70% 33%, 72% 39%, 79% 39%, 86% 36%, 93% 38%, 100% 35%, 100% 100%);
+    height: 100%;
+    width: 100%;
+    background-color: rgb(141, 141, 137);
+    z-index: 4;
+    position: absolute;
+}
+
+.mtnfar{
+    clip-path: polygon(0 100%, 0 30%, 6% 30%, 14% 29%, 21% 33%, 29% 33%, 35% 36%, 40% 33%, 46% 31%, 54% 33%, 62% 33%, 68% 35%, 74% 31%, 81% 28%, 86% 29%, 93% 28%, 100% 28%, 100% 100%);
+    height: 100%;
+    width: 100%;
+    background-color: rgb(128, 128, 128, 0.6);
+    position: absolute;
+}
+
+.field{
+    clip-path: polygon(0 90%, 0 56%, 9% 52%, 18% 50%, 30% 48%, 39% 45%, 53% 45%, 61% 46%, 72% 49%, 86% 54%, 100% 56%, 100% 90%);
+    height: 111%;
+    width: 100%;
+    background-color: rgb(37, 95, 10);
+    position: absolute;
+    z-index: 5;
+}
+
+.deathmtnsmoke{
+    clip-path: ellipse(7% 1% at 50% 50%);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 87, 87, 0.7);
+    position: absolute;
+    z-index: 5;
+    filter: blur(5%);
+    left: 11%;
+    top: -29%;
+}
+
+.stage{
+    width: 98%;
+    height: 33%;
+    top: 66%;
+    left: 10%;
+    bottom: 1%;
+    position: absolute;
+    z-index: 5;
+}
+
+.leftplatmain{
+    clip-path: polygon(74% 78%, 0% 100%, 100% 100%);
+    width: 25%;
+    height: 75%;
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    position: absolute;
+    top: -30%;
+    z-index: 10;
+    filter: brightness(.7);
+}
+.leftplatdepthr{
+    clip-path: polygon(75% 73%, 100% 93%, 100% 100%, 74% 78%);
+    width: 25%;
+    height: 75%;
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    position: absolute;
+    top: -30%;
+    left: 0%;
+    z-index: 10;
+    filter: brightness(.85);
+}
+
+.leftplatdepthl{
+    clip-path: polygon(76% 70%, 5% 90%, 0 100%, 74% 78%);
+    width: 25%;
+    height: 75%;
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    filter: brightness(.9);
+    position: absolute;
+    top: -30%;
+    left: 0%;
+    z-index: 10;
+}
+
+.leftplatbody{
+    position: absolute;
+    width: 25%;
+    height: 55%;
+    top: 45%;
+    background-image: url(https://i.imgur.com/4qrXpn5.png);
+    z-index: 10;
+    filter: brightness(.6);
+}
+
+.leftplatbodywindow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/SWCWlYK.png);
+    height: 50%;
+    width: 25%;
+    z-index: 11;
+    left: 55%;
+}
+
+.leftplatbodydepth{
+    position: absolute;
+    clip-path: polygon(0 0, 56% 1%, 56% 75%, 0 100%);
+    width: 1%;
+    height: 25%;
+    top: 45%;
+    left: 25%;
+    background-image: url(https://i.imgur.com/4qrXpn5.png);
+    z-index: 10;
+    filter: brightness(.65);
+}
+
+.mainplat{
+    position: absolute;
+    clip-path: polygon(0 95%, 100% 95%, 100% 100%, 0 100%);
+    width: 40%;
+    height: 100%;
+    top: -82.5%;
+    left: 18.75%;
+    background-image: url(https://i.imgur.com/X5SbQvP.png);
+    z-index: 9;
+}
+
+.mainplatbody{
+    position: absolute;
+    width: 40%;
+    height: 85%;
+    top: 15%;
+    left: 18.75%;
+    background-image: url(https://i.imgur.com/3hy9ZAN.png);
+    z-index: 8;
+    filter: brightness(.45);
+}
+
+.mainplatdepth{
+    position: absolute;
+    clip-path: polygon(10% 78%, 90% 78%, 100% 100%, 0 100%);
+    width: 40%;
+    height: 80%;
+    top: -67.5%;
+    left: 18.75%;
+    background-image: url(https://i.imgur.com/ZWrZFNA.png);
+    z-index: 9;
+    filter: brightness(.8);
+}
+
+.mainplatdepthshadow{
+    position: absolute;
+    clip-path: polygon(10% 78%, 100% 78%, 100% 100%, 0 100%);
+    width: 60%;
+    height: 90%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+
+.rightplat{
+    position: absolute;
+    clip-path: polygon(0 95%, 100% 95%, 100% 100%, 0 100%);
+    width: 30%;
+    height: 100%;
+    top: -49%;
+    left: 57%;
+    background-image: url(https://i.imgur.com/X5SbQvP.png);
+    z-index: 9;
+}
+
+.rightplatbody{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 50%;
+    left: 57%;
+    background-image: url(https://i.imgur.com/3hy9ZAN.png);
+    z-index: 8;
+    filter: brightness(.6);
+}
+
+.rightplatbodywindow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/SWCWlYK.png);
+    height: 50%;
+    width: 25%;
+    z-index: 11;
+    left: 44%;
+    top: 7%;
+}
+
+.rightplatdepth{
+    clip-path: polygon(6% 93%, 6% 75%, 95% 70%, 100% 100%, 0 100%, 0 93%);
+    background-image: url(https://i.imgur.com/ZWrZFNA.png);
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: -14%;
+    left: 56.85%;
+    z-index: 11;
+    filter: brightness(.75);
+}
+
+.towermain{
+    position: absolute;
+    width: 8%;
+    height: 49%;
+    background-image: url(https://i.imgur.com/4qrXpn5.png);
+    z-index: 10;
+    left: 50%;
+    top: 19%;
+    filter: brightness(.5);
+}
+
+.towermaintopdeco{
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    background-image: url(https://i.imgur.com/n4L3eqO.png);
+    z-index: 12;
+    left: 27.85%;
+    top: 13%;
+    filter: brightness(.6);
+}
+
+.towermaingreen{
+    position: absolute;
+    clip-path: polygon(20% 0, 80% 0, 95% 100%, 5% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 19.75%;
+    width: 6%;
+    left: 51%;
+    top: 1.25%;
+    z-index: 11;
+    filter: brightness(.8);
+}
+
+.towerplattop{
+    position: absolute;
+    background-image: url(https://i.imgur.com/zUr8gIM.png);
+    height: 10%;
+    width: 100%;
+    z-index: 11;
+    left: -40%;
+    top: 25%;
+    filter: brightness(1.75);
+}
+
+.towerplatmid{
+    position: absolute;
+    background-image: url(https://i.imgur.com/zUr8gIM.png);
+    height: 10%;
+    width: 100%;
+    z-index: 11;
+    left: -4%;
+    top: 50%;
+    filter: brightness(1.75);
+}
+
+.towerplatlow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/zUr8gIM.png);
+    height: 10%;
+    width: 100%;
+    z-index: 11;
+    left: -40%;
+    top: 75%;
+    filter: brightness(1.75);
+}
+
+.towerwindow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/deOBHpX.png);
+    height: 25%;
+    width: 100%;
+    z-index: 11;
+    left: 40%;
+    top: 16%;
+}
+
+.lefttowermain{
+    position: absolute;
+    clip-path: polygon(50% 0%, 40% 100%, 60% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 50%;
+    width: 28%;
+    top: 17%;
+    left: 25%;
+    z-index: 10;
+    filter: brightness(.8);
+}
+
+.lefttowerdepth{
+    position: absolute;
+    clip-path: polygon(50% 0%, 63% 93%, 60% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 50%;
+    width: 28%;
+    top: 17%;
+    left: 25%;
+    z-index: 10;
+    filter: brightness(.6);
+}
+
+.righttowermain{
+    position: absolute;
+    clip-path: polygon(45% 50%, 55% 50%, 59% 100%, 42% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 55%;
+    width: 50%;
+    top: 25%;
+    left: 60%;
+    z-index: 10;
+    filter: brightness(.65);
+}
+
+.righttowerdepth{
+    position: absolute;
+    clip-path: polygon(57% 50%, 59% 50%, 55% 100%, 52% 95%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 55%;
+    width: 48%;
+    top: 25%;
+    left: 55%;
+    z-index: 10;
+    filter: brightness(.575);
+}
+
+.righttowerwindow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/9SR8ybj.png);
+    height: 10%;
+    width: 10%;
+    top: 80%;
+    left: 45%;
+    z-index: 11;
+    filter: brightness(.5);
+}
+
+.righttowerdoor{
+    position: absolute;
+    clip-path: polygon(53% 78%, 57% 80%, 55% 100%, 51% 95%);
+    background-color: black;
+    height: 60%;
+    width: 25%;
+    top: 20%;
+    left: 67.5%;
+    z-index: 10;
+}
+
+.decoplatbody{
+    position: absolute;
+    width: 20%;
+    height: 12.5%;
+    top: 86.5%;
+    left: 34%;
+    background-image: url(https://i.imgur.com/4qrXpn5.png);
+    z-index: 10;
+    filter: brightness(.5);
+}
+
+.decoplatwindow{
+    position: absolute;
+    background-image: url(https://i.imgur.com/V65i1PE.png);
+    width: 33%;
+    height: 100%;
+    left: 34%;
+    top: 5%;
+}
+
+.decoplatdepth{
+    clip-path: polygon(2% 81%, 100% 80%, 100% 100%, 0% 100%);
+    background-image: url(https://i.imgur.com/ZWrZFNA.png);
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 67%;
+    left: 34%;
+    z-index: 10;
+    filter: brightness(.575);
+}
+
+.decoplattower{
+    position: absolute;
+    clip-path: polygon(50% 0%, 40% 100%, 60% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 25%;
+    width: 24%;
+    top: 62%;
+    left: 32.5%;
+    z-index: 10;
+    filter: brightness(.7);
+}
+
+.decoplattowerdepth{
+    position: absolute;
+    clip-path: polygon(50% 0%, 63% 93%, 60% 100%);
+    background-image: url(https://i.imgur.com/xftaZ2S.png);
+    height: 25%;
+    width: 24%;
+    top: 62%;
+    left: 32.5%;
+    z-index: 10;
+    filter: brightness(.90);
+}
+
+.kirbybody{
+    position: absolute;
+    clip-path: circle(18% at 50% 50%);
+    height: 100%;
+    width: 100%;
+    z-index: 13;
+}
+
+.kirbyhandleft{
+    position: absolute;
+    clip-path: circle(8.9% at 50% 50%);
+    height: 100%;
+    width: 100%;
+    z-index: 13;
+    left: -12%;
+    top: 5%;
+}
+
+.blue{
+    background-color:rgb(0, 140, 255);
+}
+
+.pink{
+    background-color: pink;
+}
+
+.green{
+    background-color: rgb(4, 221, 4);
+}
+
+.kirbyhandright{
+    position: absolute;
+    clip-path: circle(8.9% at 50% 50%);
+    height: 100%;
+    width: 100%;
+    z-index: 13;
+    left: 12%;
+    top: 5%;
+}
+
+.kirbyfootleft{
+    position: absolute;
+    clip-path: ellipse(13% 11% at 50% 50%);
+    background-color: rgb(194, 10, 10);
+    height: 60%;
+    z-index: 13;
+    width: 60%;
+    top: 50%;
+    left: 12%;
+}
+
+.kirbyfootright{
+    position: absolute;
+    clip-path: ellipse(13% 11% at 50% 50%);
+    background-color: rgb(194, 10, 10);
+    height: 60%;
+    width: 60%;
+    z-index: 13;
+    top: 50%;
+    left: 26%;
+}
+
+.kirby1{
+    top: 66.5%;
+    left: 47%;
+    position: absolute;
+    z-index: 14;    
+    height: 3%;
+    width: 3%;
+}
+
+.kirby2{
+    position: absolute;
+    z-index: 13;
+    top: 72.5%;
+    left: 38%;
+    height: 3%;
+    width: 3%;
+}
+
+.kirby3{
+    position: absolute;
+    z-index: 13;
+    top: 73.25%;
+    left: 52%;
+    height: 3%;
+    width: 3%;
+}
+
+.kirbyeyewhite{
+    position: absolute;
+    clip-path: polygon(48% 7%, 52% 10%, 53% 13%, 54% 20%, 54% 26%, 53% 31%, 52% 36%, 48% 38%, 43% 36%, 42% 32%, 41% 26%, 40% 21%, 41% 15%, 43% 10%);
+    background-color: white;
+    height: 20%;
+    width: 40%;
+    z-index: 15;
+    left: 2.5%;
+    top: 2%;
+}
+
+.kirbyeyeblack{
+    position: absolute;
+    clip-path: polygon(48% 7%, 52% 10%, 53% 13%, 54% 20%, 54% 26%, 53% 31%, 52% 36%, 48% 38%, 43% 36%, 42% 32%, 41% 26%, 40% 21%, 41% 15%, 43% 10%);
+    background-image: linear-gradient(blue, black);
+    height: 50%;
+    width: 45%;
+    z-index: 14;
+}
+
+.lefteye{
+    position: absolute;
+    z-index: 13;
+    top: 29%;
+    left: 23%;
+    height: 100%;
+    width: 100%;
+}
+
+.righteye{
+    position: absolute;
+    z-index: 13;
+    top: 29%;
+    left: 33%;
+    height: 100%;
+    width: 100%;
+}
+
+.kirbymouth{
+    clip-path: polygon(7% 45%, 8% 39%, 12% 38%, 43% 37%, 80% 37%, 84% 41%, 84% 46%, 78% 50%, 52% 64%, 48% 66%, 42% 69%, 37% 68%, 33% 64%, 11% 49%);
+    background-color: crimson;
+    position: absolute;
+    height: 35%;
+    width: 10%;
+    z-index: 15;
+    left: 45%;
+    top: 40%;
+}
+
+@keyframes 
