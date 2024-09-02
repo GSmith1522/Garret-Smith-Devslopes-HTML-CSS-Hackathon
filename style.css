@@ -95,6 +95,7 @@ body{
     z-index: 3;
 }
 
+
 .tvbutton{
     background-color:rgb(143, 143, 143);
     width: 2.5%;
@@ -109,6 +110,10 @@ body{
 
 .toggle-checkbox {
     display: none;
+}
+
+.toggle-checkbox:checked ~ .hidden-box {
+    display: block;
 }
 
 .toggle-checkbox:checked + label + .tvlight{
@@ -742,13 +747,6 @@ body{
     z-index: 50;
 }
 
-.toggle-checkbox:checked ~ .kirby1 ~ .kirby2 ~ .kirby3{
-    display: none;
-}
-
-.toggle-checkbox:checked ~ .hidden-box {
-    display: block;
-}
 
 .cableports{
     position: absolute;
