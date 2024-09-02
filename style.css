@@ -1061,7 +1061,7 @@ body{
 .sun{
     position: absolute;
     clip-path: circle(10% at 50% 50%);
-    background-color: orangered;
+    background-color: rgb(255, 123, 0);
     width: 75%;
     height: 75%;
     left: -5%;
