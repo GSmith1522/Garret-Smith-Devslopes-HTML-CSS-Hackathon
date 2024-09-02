@@ -16,7 +16,7 @@ body{
 }
 
 .wallleft{
-    background-color: rgb(238, 238, 237);
+    background-color: rgb(225, 226, 231);
     clip-path: polygon(0 0, 46% 0, 46% 60%, 0% 100%);
     width: 100%;
     height: 100%;
@@ -26,7 +26,7 @@ body{
 }
 
 .wallright{
-    background-color: rgba(233, 231, 222, 0.849);
+    background-color: rgba(235, 233, 225, 0.849);
     clip-path: polygon(100 0, 46% 0, 46% 60%, 100% 100%);
     width: 100%;
     height: 100%;
@@ -104,20 +104,11 @@ body{
     top: 94%;   
     border: 1px, rgb(63, 62, 62, 0.3), solid;
     border-radius: 2%;
+    z-index: 26;
 }
 
 .toggle-checkbox {
     display: none;
-}
-
-.toggle-checkbox:checked + .tvscreen{
-    background-color: black;
-    width: 85%;
-    height: 85.25%;
-    position: absolute;
-    left: 7.5%;
-    top: 5.75%;
-    z-index: 25; 
 }
 
 .toggle-checkbox:checked + label + .tvlight{
@@ -619,10 +610,11 @@ body{
 
 .kirbyhandright:hover{
     animation-name: waving;
-    animation-duration: 1.5s;
+    animation-duration: .75s;
     animation-iteration-count: infinite;
     animation-play-state: running;
     animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
 .kirbyfootleft{
@@ -648,30 +640,30 @@ body{
 }
 
 .kirby1{
-    top: 66.5%;
+    top: 49%;
     left: 47%;
     position: absolute;
     z-index: 14;    
-    height: 3%;
-    width: 3%;
+    height: 10%;
+    width: 10%;
 }
 
 .kirby2{
     position: absolute;
     z-index: 13;
-    top: 72.5%;
-    left: 38%;
-    height: 3%;
-    width: 3%;
+    top: 68%;
+    left: 18%;
+    height: 10%;
+    width: 10%;
 }
 
 .kirby3{
     position: absolute;
     z-index: 13;
-    top: 73.25%;
-    left: 52%;
-    height: 3%;
-    width: 3%;
+    top: 71%;
+    left: 68%;
+    height: 10%;
+    width: 10%;
 }
 
 .kirbyeyewhite{
@@ -738,3 +730,368 @@ body{
       transform: translateX(3%) translateY(-13%);
     }
   }
+
+  .hidden-box {
+    display: none;
+    position: absolute;
+    width: 85%;
+    height: 85.25%;
+    left: 7.5%;
+    top: 5.75%;
+    background-color: rgb(0, 0, 0);
+    z-index: 50;
+}
+
+.toggle-checkbox:checked ~ .kirby1 ~ .kirby2 ~ .kirby3{
+    display: none;
+}
+
+.toggle-checkbox:checked ~ .hidden-box {
+    display: block;
+}
+
+.cableports{
+    position: absolute;
+    clip-path: ellipse(49% 8% at 50% 50%);
+    width: 5%;
+    height: 5%;
+    left: 46%;
+    top: 83.1%;
+    background-color:rgba(110, 110, 110, 0.76);
+    z-index: 8;
+}
+
+.video{
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 71% 53%, 71% 100%, 27% 100%, 27% 53%, 0 31%);
+    width: .5%;
+    height: 2%;
+    left: 47%;
+    top: 85.5%;
+    background-color:rgb(214, 200, 0);
+    z-index: 25;
+}
+
+.audiol{
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 71% 53%, 71% 100%, 27% 100%, 27% 53%, 0 31%);
+    width: .5%;
+    height: 2%;
+    left: 48%;
+    top: 85.5%;
+    background-color:rgb(255, 255, 255);
+    z-index: 25;
+}
+
+.audior{
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 71% 53%, 71% 100%, 27% 100%, 27% 53%, 0 31%);
+    width: .5%;
+    height: 2%;
+    left: 49%;
+    top: 85.5%;
+    background-color:rgb(214, 0, 0);
+    z-index: 25;
+}
+
+.rcacablebranch{
+    clip-path: polygon(14% 0, 21% 0, 19% 11%, 20% 20%, 20% 29%, 22% 35%, 30% 43%, 44% 41%, 44% 28%, 46% 16%, 48% 7%, 47% 0, 53% 0, 54% 9%, 53% 16%, 52% 23%, 52% 30%, 53% 39%, 52% 45%, 64% 44%, 71% 38%, 78% 31%, 81% 23%, 80% 14%, 81% 4%, 79% 0%, 86% 0%, 88% 6%, 86% 15%, 88% 26%, 86% 33%, 80% 41%, 67% 50%, 54% 52%, 55% 63%, 56% 73%, 54% 79%, 55% 90%, 55% 100%, 44% 100%, 44% 86%, 46% 75%, 43% 57%, 43% 50%, 27% 49%, 14% 42%, 12% 25%, 13% 11%);
+    width: 3%;
+    height: 3%;
+    left: 46.75%;
+    top: 87%;
+    background-color:rgb(0, 0, 0);
+    z-index: 24;
+    position: absolute;
+}
+
+.n64{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 89.8%;
+    left: 44.75%;
+    z-index: 26;
+}
+
+
+.n64main{
+    position: absolute;
+    clip-path: polygon(10% 60%, 28% 59%, 40% 51%, 59% 51%, 69% 59%, 90% 60%, 91% 100%, 9% 100%);
+    background-color:rgb(31, 31, 31);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}
+
+
+
+.n64logo{
+    position: absolute;
+    background-image: url(https://i.imgur.com/M48DWYc.png);
+    z-index: 28;
+    height: 15%;
+    width: 8%;
+    left: 42%;
+    top: 82.25%;
+}
+
+.n64depth{
+    position: absolute;
+    clip-path: polygon(17% 7%, 10% 21%, 10% 61%, 90% 61%, 90% 18%, 83% 6%, 66% 0, 31% 0);
+    background-color:rgb(29, 29, 29);
+    height: 100%;
+    width: 100%;
+}
+
+.n64rfootdepth{
+    position: absolute;
+    clip-path: polygon(0 29%, 36% 28%, 30% 0, 60% 2%, 78% 9%, 93% 23%, 97% 49%, 93% 75%, 75% 89%, 41% 93%, 15% 85%, 3% 61%);
+    background-color:rgb(34, 34, 34);
+    height: 20%;
+    width: 12%;
+    left: 85.25%;
+    top: 69%;
+    z-index: 21;
+}
+
+.n64rfoot{
+    position: absolute;
+    clip-path: polygon(0 0, 78% 0, 76% 100%, 0% 100%);
+    background-color:rgb(29, 29, 29);
+    height: 20%;
+    width: 15%;
+    left: 85.25%;
+    top: 80%;
+    z-index: 21;
+}
+
+.n64lfootdepth{
+    position: absolute;
+    clip-path: polygon(2% 29%, 14% 10%, 38% 2%, 62% 0, 64% 28%, 100% 29%, 98% 68%, 87% 85%, 63% 96%, 33% 96%, 10% 90%, 2% 69%);
+    background-color:rgb(34, 34, 34);
+    height: 20%;
+    width: 15%;
+    left: .5%;
+    top: 69%;
+    z-index: 21;
+}
+
+.n64lfoot{
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+    background-color:rgb(29, 29, 29);
+    height: 20%;
+    width: 15%;
+    left: .75%;
+    top: 80%;
+    z-index: 21;
+}
+
+.p1{
+    position: absolute;
+    clip-path: circle(15% at 50% 50%);
+    background-color: gray;
+    left: 10%;
+    top: 75%;
+    height: 25%;
+    width: 25%;
+    z-index: 27;
+}
+
+.p2{
+    position: absolute;
+    clip-path: circle(15% at 50% 50%);
+    background-color: gray;
+    left: 25%;
+    top: 75%;
+    height: 25%;
+    width: 25%;
+    z-index: 27;
+}
+
+.p3{
+    position: absolute;
+    clip-path: circle(15% at 50% 50%);
+    background-color: gray;
+    left: 50%;
+    top: 75%;
+    height: 25%;
+    width: 25%;
+    z-index: 27;
+}
+
+.p4{
+    position: absolute;
+    clip-path: circle(15% at 50% 50%);
+    background-color: gray;
+    left: 65%;
+    top: 75%;
+    height: 25%;
+    width: 25%;
+    z-index: 27;
+}
+
+.n64light{
+    position: absolute;
+    clip-path: ellipse(28% 11% at 50% 50%);
+    background-color:rgb(255, 0, 0, 0.8);
+    border: 2px, rgba(255, 0, 0, 0.2), solid;
+    height: 10%;
+    width: 10%;
+    left: 44%;
+    top: 74%;
+    z-index: 27;
+}
+
+.n64gameslot{
+    position: absolute;
+    clip-path: ellipse(32% 7% at 50% 50%);
+    background-color: gray;
+    height: 30%;
+    width: 60%;
+    left:20%;
+    top: 17%;
+    z-index: 27;
+}
+.n64game{
+    position: absolute;
+    clip-path: polygon(27% 34%, 68% 34%, 88% 46%, 100% 68%, 100% 100%, 0 100%, 0 71%, 8% 48%);
+    background-color: gray;
+    height: 50%;
+    width: 35%;
+    left:32%;
+    top: -18%;
+    z-index: 27;
+}
+
+.n64powercord{
+    position: absolute;
+    clip-path: polygon(0% 29%, 2% 20%, 9% 16%, 15% 20%, 16% 24%, 17% 31%, 18% 39%, 21% 47%, 25% 54%, 38% 55%, 48% 55%, 57% 47%, 66% 38%, 72% 31%, 79% 22%, 84% 14%, 87% 6%, 88% 0, 90% 0, 89% 7%, 87% 14%, 84% 22%, 79% 29%, 73% 35%, 68% 42%, 59% 52%, 45% 60%, 32% 60%, 23% 55%, 18% 49%, 16% 43%, 16% 37%, 15% 30%, 14% 25%, 9% 21%, 5% 25%);
+    background-color: black;
+    height: 12%;
+    width: 42%;
+    top: 88%;
+    left: 52%;
+    z-index: 20;
+}
+
+.outlet{
+    position: absolute;
+    clip-path: polygon(23% 0, 100% 12%, 94% 94%, 18% 84%);
+    background-color: rgb(224, 223, 221) ;
+    height: 10%;
+    width: 2.5%;
+    left: 88.15%;
+    top: 80%;
+    z-index: 10;
+    transform: rotate(20%);
+}
+
+.plug1{
+    position: absolute;
+    clip-path: polygon(42% 23%, 80% 22%, 100% 35%, 100% 64%, 82% 76%, 45% 75%, 11% 74%, 1% 61%, 0 39%, 11% 25%);
+    background-color: rgb(238, 238, 238);
+    height: 40%;
+    width: 35%;
+    top: 15%;
+    left: 34%;
+}
+
+.plug2{
+    position: absolute;
+    clip-path: polygon(27% 32%, 66% 26%, 79% 35%, 79% 68%, 65% 75%, 23% 71%, 15% 61%, 16% 43%);
+    background-color: black;
+    height: 40%;
+    width: 50%;
+    top: 55%;
+    left: 26%;
+}
+
+.window{
+    clip-path: polygon(0 11%, 81% 0, 81% 82%, 0% 100%);
+    position: absolute;
+    height: 50%;
+    width: 15%;
+    top: 25%;
+    left: 5%;
+    z-index: 6;
+
+}
+
+.silltop{
+    position: absolute;
+    clip-path: polygon(8% 49%, 90% 38%, 90% 29%, 8% 41%);
+    background-color: rgb(226, 221, 216);
+    height: 100%;
+    width: 100%;
+    top: -30%;
+    left: -8%;
+    z-index: 7;
+}
+
+.sillbottom{
+    position: absolute;
+    clip-path: polygon(7% 54%, 90% 38%, 90% 24%, 8% 41%);
+    background-color: rgb(231, 227, 221);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: -8%;
+    z-index: 7;
+}
+
+.windowdepth{
+    position: absolute;
+    clip-path: polygon(100% 100%, 100% 0, 95% 10%, 95% 89%);
+    background-color: rgb(218, 213, 207);
+    height: 85%;
+    width: 75%;
+    left: 6%;
+    z-index: 8;
+}
+
+.outside{
+    position: absolute;
+    clip-path: polygon(0 11%, 81% 0, 81% 82%, 0% 100%);
+    background-image: linear-gradient(violet, orange, aquamarine) ;
+    width: 97%;
+    height: 97%;
+}
+.sun{
+    position: absolute;
+    clip-path: circle(10% at 50% 50%);
+    background-color: orangered;
+    width: 75%;
+    height: 75%;
+    left: -5%;
+    top: 35%;
+}
+
+.fieldirl{
+    clip-path: polygon(0 81%, 99% 59%, 100% 100%, 0% 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 112, 10);
+}
+
+.windowdivvert{
+    position: absolute;
+    clip-path: polygon(52% 0, 56% 0, 56% 100%, 52% 100%);
+    background-color: rgb(214, 208, 208);
+    width: 100%;
+    height: 100%;
+    left: -15%;
+
+}
+
+.windowdivhoriz{
+    position: absolute;
+    clip-path: polygon(100% 38%, 100% 42%, 0 60%, 0 56%);
+    background-color: rgb(211, 205, 205);
+    width: 100%;
+    height: 90%;
+    left: -15%;
+    top: 10%;
+}
